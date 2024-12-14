@@ -14,7 +14,7 @@ router.get("/", (req, res) => {
 });
 
 router.get("/contato.ejs", (req, res) => {
-  res.render("contato.ejs");
+  res.render("orcamento.ejs");
 });
 
 router.get("/cadastro.ejs", (req, res) => {

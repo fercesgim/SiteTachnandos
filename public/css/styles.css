@@ -29,3 +29,9 @@ footer {
   text-align: center;
   padding: 10px;
 }
+
+/* list de produtos -----------------*/
+.botaoSearch{
+  color: #fff;
+  background-color:#032830 ;
+}
