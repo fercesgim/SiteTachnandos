@@ -1,28 +1,11 @@
 <br />
 <br />
 <div class="container mb-5">
-  <h1 class="mt-5 mb-5">Nossos produtos</h1>
-  <div class="input-group mb-3">
-    <input
-      type="text"
-      class="form-control"
-      placeholder="Notebook Dell g15, Razer Vier mini..."
-      aria-label="Pesquisar itens"
-      aria-describedby="Campo de pesquisa"
-    />
-    <button
-      aria-label="Enviar pesquisa"
-      class="btn btn-lg btn-outline-secondary botaoSearch"
-      type="button"
-      id="button-addon2"
-    >
-      Pesquisar
-    </button>
-  </div>
+  <h1 class="mt-5 mb-5">Nossos produtos</h1
 </div>
  <!-- itens -->
   <div class="container mb-5">
  <ul class="list-group">
-    <% for (i = 0; i < 3; i++){ %> <%-
+    <% for (i = 3; i < 6; i++){ %> <%-
     include("itemListsProdutos",{produto : produtos[i], indice:i}); %> <% }; %>
 </div>

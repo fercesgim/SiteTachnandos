@@ -1,20 +1,20 @@
-<li class="list-group-item" <%= indice === 0 ? 'active' : '' %>>An item
+<li class="list-group-item itemNomePrincipal" <%= indice === 0 ? 'active' : '' %>><%= produto.card_tittle%>
     <li class="list-group-item">
         <div class="row">
-<div class="col-4 d-flex align-items-center">
+<div class="col-2 d-flex align-items-center">
 
     <img
     src="<%= produto.src %>"
-    class="card-img-top"
+    class="card-img-top item"
     alt="<%= produto.alt %>"
   />
 
 </div>
-<div class="col-8 d-flex align-items-center">
-
-    <h5 class="card-title"><%= produto.card_tittle %></h5>
-    <p class="card-text"><%= produto.p %></p>
-
+<div class="col-4 d-flex align-items-center">
+    <p class="card-title align-items-center text-center"><%= produto.card_tittle%></p>
+</div>
+<div class="col-6 d-flex align-items-center">
+    <p class="card-text align-items-center"><%= produto.p %></p>
 </div>
 </div>
     </li>

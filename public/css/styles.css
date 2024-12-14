@@ -3,6 +3,10 @@
   background-color: #032830;
 }
 
+.card-img-top.item,
+.card-body.item {
+  background-color: #03283000;
+}
 /* Ajustes te proporção*/
 html,
 body {
@@ -11,7 +15,7 @@ body {
 }
 
 body {
-  background-image: url(images/ImagemdeFundo.jpg);
+  background-image: url('../images/ImagemdeFundo.jpg');
   background-repeat: no-repeat no-repeat;
   display: flex;
   flex-direction: column;
@@ -34,4 +38,9 @@ footer {
 .botaoSearch{
   color: #fff;
   background-color:#032830 ;
+}
+
+.itemNomePrincipal{
+  color: #fff;
+  background-color: #032830;
 }
