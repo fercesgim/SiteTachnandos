@@ -28,8 +28,8 @@ async create (req, res) {
     const { email, senha } = req.body;
   
     try {
-      const user = await Usuarios.findOne({ email });
-  return res.json(user)
+      const user = await Usuarios.findOne({ where: { email } });
+
       if (!user || user.senha !== senha) {
         res.render("../views/cadastro.ejs");
       }
