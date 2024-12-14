@@ -1,0 +1,13 @@
+<div class="carousel-item <%= indice === 0 ? 'active' : '' %>">
+  <div class="card text-center mx-auto" style="width: 18rem">
+    <img
+      src="<%= produto.src %>"
+      class="card-img-top"
+      alt="<%= produto.alt %>"
+    />
+    <div class="card-body">
+      <h5 class="card-title"><%= produto.card_tittle %></h5>
+      <p class="card-text"><%= produto.p %></p>
+    </div>
+  </div>
+</div>

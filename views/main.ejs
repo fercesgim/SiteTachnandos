@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-bs-theme="dark">
+  <%- include('./layouts/head.ejs') %>
+  <body>
+    <%- include('partials/navbar.ejs') %>
+    <main class="flex-grow-1">
+      <div class="container my-5">
+        <h2 class="text-center mb-4 text-white fs-1">Nossos Produtos</h2>
+      </div>
+      <%- include('partials/corpoCarousel.ejs', {produtos}) %>
+    </main>
+    <%- include('partials/footer.ejs') %>
+  </body>
+  <script src="js/bootstrap.bundle.min.js"></script>
+</html>

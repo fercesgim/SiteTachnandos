@@ -1,0 +1,31 @@
+.card-body,
+.card-img-top {
+  background-color: #032830;
+}
+
+/* Ajustes te proporção*/
+html,
+body {
+  height: 100%; /* Garante que a página use toda a altura da janela */
+  margin: 0; /* Remove espaçamentos padrão */
+}
+
+body {
+  background-image: url(images/ImagemdeFundo.jpg);
+  background-repeat: no-repeat no-repeat;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  flex-direction: column; /* Permite que os elementos sejam dispostos verticalmente */
+}
+
+main {
+  flex-grow: 1; /* Faz com que o <main> ocupe o espaço restante */
+}
+
+footer {
+  background-color: #000; /* Exemplo de fundo para o rodapé */
+  color: #fff; /* Exemplo de texto branco */
+  text-align: center;
+  padding: 10px;
+}

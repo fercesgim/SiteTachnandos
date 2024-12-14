@@ -1,0 +1,58 @@
+<div class="row justify-content-center mb-5">
+  <div class="mt-5 col-md-5">
+    <h2 class="mb-4"><i class="bi bi-envelope-at-fill"></i> Cadastro</h2>
+    <form action="/criarUsuario" method="post" class="mt-2" id="user_contact">
+      <div class="mb-3">
+        <label for="user_nome" class="form-label">Nome</label>
+        <input
+          name="nome"
+          type="text"
+          class="form-control"
+          id="user_nome"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <label for="user_cpf" class="form-label">CPF</label>
+        <input
+          name="cpf"
+          type="text"
+          class="form-control"
+          id="user_cpf"
+          maxlength="14"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <label for="user_email" class="form-label">Email</label>
+        <input
+          name="email"
+          type="email"
+          class="form-control"
+          id="user_email"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <label for="user_password" class="form-label">Senha</label>
+        <input
+          name="senha"
+          type="password"
+          class="form-control"
+          id="user_password"
+          required
+        />
+      </div>
+      <div class="d-grid gap-2">
+        <button type="submit" class="btn btn-info mb-4">Cadastrar</button>
+        <p class="text-center">
+          <a
+            href="/login.ejs"
+            class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+            >Já possui Cadastro? Faça Login!</a
+          >
+        </p>
+      </div>
+    </form>
+  </div>
+</div>

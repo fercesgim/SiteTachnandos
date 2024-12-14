@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-bs-theme="dark">
+  <%- include('./layouts/head.ejs') %>
+  <body>
+    <%- include('./partials/navbarCadastroLogin.ejs') %>
+    <main class="container"><%- include('./partials/formCadastro.ejs') %></main>
+  </body>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <%- include('./validadores/validaCPF') %>
+</html>
