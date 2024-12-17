@@ -5,29 +5,27 @@ const bodyParser = require("body-parser");
 router.use(bodyParser.urlencoded({ extended: false }));
 router.use(bodyParser.json());
 const usuarioController = require("../controllers/usuarioController");
+const { type } = require("os");
 
 
 //Rotas
 
 router.get("/", (req, res) => {
-  res.render("login.ejs");
+  res.render("login", { errorMessage: '', tipo: '' });
 });
 
 router.get("/contato.ejs", (req, res) => {
-  res.render("orcamento.ejs");
+  res.render("orcamento");
 });
 
 router.get("/cadastro.ejs", (req, res) => {
-  res.render("cadastro.ejs");
+  res.render("cadastro", { errorMessage: '', tipo: ''});
 });
 
 router.get("/login.ejs", (req, res) => {
-  res.render("login.ejs");
+  res.render("login", { errorMessage: '', tipo: ''});
 });
 
-router.get("/footer.ejs", (req, res) => {
-  res.render("footer.ejs");
-});
 
 router.get("/main.ejs", ProductController.produtos_list);
 

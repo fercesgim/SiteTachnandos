@@ -1,54 +1,37 @@
 const express = require("express");
 
-const Usuarios = require("../models/usuarioSchema.js")
+const Usuarios = require("../models/usuarioSchema.js");
 
 module.exports = {
-async create (req, res) {
-
-
-
+  async create(req, res) {
     const { email, senha, nome, cpf } = req.body;
     console.log(req.body);
 
     if (!email || !senha || !nome || !cpf) {
-      return res.status(400).json({ error: "Necessario e-mail/ senha" });
+      return res.render('cadastro.ejs', { errorMessage: 'Preencha os campos corretamente!', tipo: 'vermelho' })
     }
 
     const criarUsuario = await Usuarios.create({
       email,
       senha,
       nome,
-      cpf
+      cpf,
     });
-
-    return res.redirect("login.ejs");
+    res.status(500).render('cadastro.ejs', { errorMessage: 'Usuario criado com sucesso!', tipo: 'verde' });
   },
 
-  async login (req, res) {
+  async login(req, res) {
     const { email, senha } = req.body;
-  
     try {
       const user = await Usuarios.findOne({ where: { email } });
 
       if (!user || user.senha !== senha) {
-        res.render("../views/cadastro.ejs");
+        return res.render('login', { errorMessage: 'Usuário ou senha inválidos!', tipo: 'vermelho' });
       }
-       res.redirect("/main.ejs");
+      res.redirect("/main.ejs");
     } catch (error) {
       console.error(error);
-      res.status(500)
+      res.status(500).render('login', { errorMessage: 'Erro ao tentar fazer login!', tipo: 'vermelho' });
     }
-  
   },
 };
-
-
-
-
-
-
-
-
-
-
-

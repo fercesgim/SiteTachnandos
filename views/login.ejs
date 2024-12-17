@@ -2,6 +2,12 @@
 <html lang="pt-BR" data-bs-theme="dark">
   <%- include('./layouts/head.ejs') %>
   <body>
+    <% if (errorMessage) { %>
+      <section class="message message-<%= tipo %>">
+        <p><%= errorMessage %></p>
+        <span id="close-message"><i class="bi bi-x"></i></span>
+    </section>
+    <% } %>
     <%- include('./partials/navbarCadastroLogin.ejs') %>
     <main class="container justify-content-md-center">
     <%- include('./partials/formLogin.ejs') %>
