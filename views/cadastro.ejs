@@ -2,12 +2,11 @@
 <html lang="pt-BR" data-bs-theme="dark">
   <%- include('./layouts/head.ejs') %>
   <body>
-    <% if (errorMessage) { %>
-    <div class="alert alert-danger mt-3"><%= errorMessage %></div>
-    <% } %> <%- include('./partials/navbarCadastroLogin.ejs') %>
+    <%- include('./partials/navbarCadastroLogin.ejs') %>
     <main class="container"><%- include('./partials/formCadastro.ejs') %></main>
   </body>
 
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="/js/validaCPF.js"></script>
+  <script src="/js/mensagemErro.js"></script>
 </html>

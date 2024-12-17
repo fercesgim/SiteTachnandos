@@ -1,4 +1,5 @@
 exports.produtos_list = async function (req, res, next) {
+  //Conteudo dos produtos 
   const produtos = [
     {
       src: "images/notebook.avif",

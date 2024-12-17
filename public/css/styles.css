@@ -1,3 +1,4 @@
+/* Ajustes no carrossel */
 .card-body,
 .card-img-top {
   background-color: #032830;
@@ -43,4 +44,29 @@ footer {
 .itemNomePrincipal{
   color: #fff;
   background-color: #032830;
+}
+/* Mensagens */
+
+.mensagem{
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+  width: auto;
+  height: 10%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.mensagem p{
+margin: 0;
+}
+
+.mensagem-vermelho{
+  background-color: #a50000c7;
+  color: #f0b2b2;
 }

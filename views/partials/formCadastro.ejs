@@ -54,5 +54,11 @@
         </p>
       </div>
     </form>
+    <% if (errorMessage) { %>
+      <section class=" alert mensagem mensagem-<%= tipo %>">
+        <p><%= errorMessage %></p>
+        <span class="fechar-mensagem"><i class="bi bi-x"></i></span>
+    </section>
+    <% } %>
   </div>
 </div>
