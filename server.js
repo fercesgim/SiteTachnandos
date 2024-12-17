@@ -5,6 +5,7 @@ const router = require("./routes/main");
 const bodyParser = require("body-parser");
 const sequelize = require("./config/sqlConnection.js");
 const path = require('path');
+const { DATE } = require("sequelize");
 
 // Servir arquivos estáticos da pasta 'public'
 app.use(express.static("public")); // Aqui está certo
@@ -14,7 +15,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Conectar ao banco de dados
-sequelize.sync().then(() => console.log('banco rodando'));
+sequelize.sync().then(() => console.log('------------------------------Banco Rodando!------------------------------'));
 
 // Configuração das rotas
 app.use(router);
