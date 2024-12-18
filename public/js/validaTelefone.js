@@ -1,4 +1,4 @@
-const TELEFONE_INVALIDO = "Telefone inválido";
+const TELEFONE_INVALIDO = "Verifique o Telefone";
 
 // Função para validar telefone-------------------------------------------------
 function validarTelefone(telefone) {
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
       feedback.style.color = "";
     } else {
       feedback.textContent = TELEFONE_INVALIDO;
-      feedback.style.color = "red";
+      feedback.style.color = "yellow";
     }
   });
 });

@@ -1,15 +1,11 @@
-const CPF_INVALIDO = "CPF inválido"
+const CPF_INVALIDO = "CPF inválido";
 
 // Função para aplicar máscara no CPF-----------------------------
 function aplicarMascaraCPF(cpf) {
-  // Remove caracteres não numéricos
-  cpf = cpf.replace(/\D/g, "");
-
-  // Aplica a máscara XXX.XXX.XXX-XX
+  cpf = cpf.replace(/\D/g, ""); // Remove caracteres não numéricos
   cpf = cpf.replace(/(\d{3})(\d)/, "$1.$2");
   cpf = cpf.replace(/(\d{3})(\d)/, "$1.$2");
   cpf = cpf.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
-
   return cpf;
 }
 //-----------------------------------------------------------------
@@ -38,13 +34,13 @@ function validarCPF(cpf) {
   const digito1 = calcularDigito(baseCPF);
   const digito2 = calcularDigito(baseCPF + digito1);
 
-  // Retorna se os dígitos calculados são iguais aos fornecidos
   return cpf === baseCPF + digito1.toString() + digito2.toString();
 }
 
-// Adiciona eventos ao campo CPF
+// Adiciona eventos ao campo CPF e formulário
 document.addEventListener("DOMContentLoaded", () => {
   const cpfInput = document.getElementById("user_cpf");
+  const form = document.querySelector("form"); // Seleciona o formulário
 
   // Cria um elemento de feedback dinâmico abaixo do input
   const feedback = document.createElement("div");
@@ -74,5 +70,16 @@ document.addEventListener("DOMContentLoaded", () => {
       feedback.style.color = "red";
     }
   });
+
+  // Evento para impedir o submit se o CPF for inválido
+  form.addEventListener("submit", (event) => {
+    const cpf = cpfInput.value;
+    if (!validarCPF(cpf)) {
+      feedback.textContent = CPF_INVALIDO;
+      feedback.style.color = "red";
+      event.preventDefault(); // Impede o envio do formulário
+    }
+  });
 });
+
 //-----------------------------------------------------------------
